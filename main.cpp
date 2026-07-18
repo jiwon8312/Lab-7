@@ -14,6 +14,8 @@ namespace JangJiwon2593266
 	timeOfDay retVal(timeOfDay val) { val += 1; return val; }
 	timeOfDay& retRef(timeOfDay& ref) { ref += 1; return ref; }
 	timeOfDay* retPtr(timeOfDay* ptr) { *ptr += 1; return ptr; }
+}
+
 int main()
 {
 	using namespace JangJiwon2593266;
