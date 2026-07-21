@@ -20,9 +20,9 @@ int main()
 {
 	using namespace JangJiwon2593266;
 
-	timeOfDay t{ 15,45 }; std::cout << val << ' ';
+	timeOfDay val{ 15,45 }; std::cout << val << ' ';
 	parVal(val); std::cout << val << '\n';
-	timeOfDay& ref(val); std::cout << ref << ' ';
+	timeOfDay& ref{val}; std::cout << ref << ' ';
 	parRef(ref); std::cout << ref << '\n';
 	timeOfDay* ptr(&val); std::cout << *ptr << ' ';
 	parPtr(ptr); std::cout << *ptr << '\n';
