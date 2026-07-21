@@ -8,29 +8,29 @@ namespace JangJiwon2593266
 		for (int i = 0; i < n; ++i)
 			std::cout << a[i];
 	}
-	void parVal(timeOfDay val) { val += 1; }
-	void parRef(timeOfDay& ref) { ref += 1; }
-	void parPtr(timeOfDay* ptr) { *ptr += 1; }
-	timeOfDay retVal(timeOfDay val) { val += 1; return val; }
-	timeOfDay& retRef(timeOfDay& ref) { ref += 1; return ref; }
-	timeOfDay* retPtr(timeOfDay* ptr) { *ptr += 1; return ptr; }
+	void parVal(timeOfDay val) {val += 1;}
+	void parRef(timeOfDay& ref) {ref += 1;}
+	void parPtr(timeOfDay* ptr) {*ptr += 1;}
+	timeOfDay retVal(timeOfDay val) {val += 1; return val;}
+	timeOfDay& retRef(timeOfDay& ref) {ref += 1; return ref;}
+	timeOfDay* retPtr(timeOfDay* ptr) {*ptr += 1; return ptr;}
 }
 
 int main()
 {
 	using namespace JangJiwon2593266;
 
-	timeOfDay val{ 15,45 }; std::cout << val << ' ';
+	timeOfDay val{8,25}; std::cout << val << ' ';
 	parVal(val); std::cout << val << '\n';
-	timeOfDay& ref{val}; std::cout << ref << ' ';
+	timeOfDay& ref(val); std::cout << ref << ' ';
 	parRef(ref); std::cout << ref << '\n';
 	timeOfDay* ptr(&val); std::cout << *ptr << ' ';
 	parPtr(ptr); std::cout << *ptr << '\n';
 
-	val = timeOfDay{ 12,30 };
+	val = timeOfDay{8,29};
 	std::cout << val << ' ' << retVal(val) << '\n';
 	std::cout << ref << ' ' << retRef(ref) << '\n';
-	std::cout << *ptr << ' ' << *retPtr(ptr) << '\n' << std::endl;
+	std::cout << *ptr << ' ' << *retPtr(ptr) << '\n';
 
 	timeOfDay* tPtr{ new timeOfDay };
 	tPtr->setHour(15);
